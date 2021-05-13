@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Simple application</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	</head>
+
+	<body>
+	<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="/signup" method="GET">
+			<h1>Create Account</h1>
+            <input type="text" name="uname" placeholder="Username" required/>
+			<input type="text" name="name" placeholder="Name" required/>
+			<input type="email" name="mail" placeholder="Email" required/>
+			<input type="password" id="password" minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title="Please include number,alphabet and atleast one character" name="pswd" placeholder="Password" required/>
+            <input type="text" name="add" placeholder="Address" required/>
+            <input type="tel" name="num" placeholder="Mobile" required/>
+			<button>Sign Up</button>
+		</form>
+	</div>
+	
+	<div class="form-container sign-in-container">
+		<form action="/login" method="POST">
+			<h1>Sign In</h1>
+			<input type="email" name="mail" placeholder="Username/Email" required/>
+			<input type="password" name="pswd" placeholder="Password" required/>
+			<br>
+			<button>Sign In</button>
+		</form>
+	</div>
+
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<p>To keep connected with us please login with your personal info</p>
+				<button class="ghost" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hello!</h1>
+				<p>Enter your personal details and start journey with us</p>
+				<button class="ghost" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+	</div>
+	<script src="index.js"></script>
+	</body>
+</html>
